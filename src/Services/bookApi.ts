@@ -26,7 +26,7 @@ export interface BorrowSummary {
 
 export const bookApi = createApi({
   reducerPath: 'bookApi',
-  baseQuery: fetchBaseQuery({ baseUrl: import.meta.env.VITE_BASE_API || 'http://localhost:5000' }),
+  baseQuery: fetchBaseQuery({ baseUrl: import.meta.env.VITE_BASE_URL}),
   tagTypes: ['Books', 'BorrowSummary'],
   endpoints: (builder) => ({
     getBooks: builder.query<Book[], void>({
